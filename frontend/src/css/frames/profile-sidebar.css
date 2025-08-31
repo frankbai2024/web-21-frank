@@ -15,5 +15,51 @@
 }
 
 .web-logo img {
-  width: 171px;
+	width: 171px;
+}
+
+.profile-header {
+	width: 100%;
+	margin-top: 15px;
+	text-align: left;
+}
+
+.profile-avatar {
+	display: inline-block;
+	/* 头像宽度 */
+	width: 56px;
+	/* 头像高度 */
+	height: 56px;
+	/* 头像圆角 */
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.profile-identify {
+	vertical-align: top;
+	display: inline-block;
+	text-align: left;
+	padding-top: 4px;
+}
+
+.profile-name {
+	font-size: var(--font-size-medium);
+	font-weight: bold;
+	line-height: 16px;
+	margin: 8px 0;
+}
+
+.profile-email {
+	font-size: var(--font-size-xsmall);
+	color: var(--color-text-light);
+	line-height: 12px;
+	margin: 0;
+}
+
+.profile-description {
+	font-size: var(--font-size-xsmall);
+	text-align: left;
+	color: var(--color-text-light);
+	line-height: 20px;
+	margin: 8px 0;
 }
