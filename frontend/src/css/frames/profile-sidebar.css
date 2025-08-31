@@ -63,3 +63,22 @@
 	line-height: 20px;
 	margin: 8px 0;
 }
+
+.profile-media {
+	width: 100%;
+	text-align: left;
+	margin-top: 15px;
+}
+
+.profile-media-item {
+	margin: 24px 0;
+}
+
+.profile-media-icon {
+	margin-right: 4px;
+}
+
+.profile-media-icon img {
+	width: 14px;
+	height: 14px;
+}
