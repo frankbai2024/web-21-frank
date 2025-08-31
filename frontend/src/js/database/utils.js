@@ -55,5 +55,5 @@ export const getResourcePath = (pathInfo) => {
 
     // pathInfo = [userPosts, userPostsComments, ]
     // http://localhost:80/api/userPosts/userPostsComments
-    return `${protocol}${dbPath}/api/${path.join(pathInfo, '/')}`;
+    return `${protocol}${dbPath}/api/${path.join(...pathInfo, '/')}`;
 }
