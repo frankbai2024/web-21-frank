@@ -82,3 +82,38 @@
 	width: 14px;
 	height: 14px;
 }
+
+.btn-profile {
+	width: 100%;
+	/* 按钮宽度 */
+	padding: 10px;
+	/* 按钮内边距 */
+	height: 40px;
+	/* 按钮高度 */
+	border: none;
+	/* 去掉边框 */
+	border-radius: var(--btn-border-radius);
+	/* 按钮圆角 */
+	cursor: pointer;
+	/* 鼠标悬停样式 */
+	margin-top: 15px;
+	/* 按钮顶部间距 */
+	font-size: var(--font-size-small);
+	font-weight: 500;
+}
+
+.btn-profile:hover {
+	opacity: 0.8;
+	/* 按钮悬停透明度 */
+}
+
+.btn-edit-profile {
+	background-color: var(--color-white);
+	color: var(--color-text);
+}
+
+.btn-create-post {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+}
+
