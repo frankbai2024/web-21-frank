@@ -1,11 +1,9 @@
-import { getProfiles } from './src/js/database/database.js'
+import {refreshProfileSidebarData} from './src/js/page-content/profile-sidebar'
 
 
 async function initialize() {
-    const profiles = await getProfiles();
-    console.log(profiles);
+    await refreshProfileSidebarData();
 }
-
 
 // Call the async function to execute the code
 initialize()

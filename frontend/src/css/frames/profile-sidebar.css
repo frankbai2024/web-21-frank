@@ -83,6 +83,10 @@
 	height: 14px;
 }
 
+.profile-media-value {
+  float: right;
+}
+
 .btn-profile {
 	width: 100%;
 	/* 按钮宽度 */
