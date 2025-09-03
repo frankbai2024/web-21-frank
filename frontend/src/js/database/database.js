@@ -19,3 +19,9 @@ export const updateProfiles = async (profileData) => {
 	const updatedProfile = await patchData(path, profileData);
 	return updatedProfile;
 };
+
+export const getPosts = async () => {
+	const path = getResourcePath(["userPosts"]);
+	const userPosts = await getData(path);
+	return userPosts.data;
+};
