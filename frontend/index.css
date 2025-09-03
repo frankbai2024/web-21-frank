@@ -1,5 +1,8 @@
 @import "normalize.css";
 
+/* --- Component --- */
+@import "./src/css/components/common-modal.css";
+
 /* --- Foundation --- */
 @import  './src/css/foundation/common.css';
 

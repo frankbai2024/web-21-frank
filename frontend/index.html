@@ -23,20 +23,17 @@
 			<div class="profile-infomation">
 				<div class="profile-header">
 					<img id="profile-avatar" class="profile-avatar" src="./public/image/profile/profile_12.png"
-						alt="Avatar">
+						alt="Avatar" />
 					<div class="profile-identify">
-						<p class="profile-name" id="profile-name">
-							Sam Li
-						</p>
-						<p class="profile-email" id="profile-email">
-							samli@example.com
-						</p>
+						<p class="profile-name" id="profile-name">Sam Li</p>
+						<p class="profile-email" id="profile-email">samli@example.com</p>
 					</div>
 				</div>
 			</div>
 			<!-- description -->
 			<p class="profile-description" id="profile-description">
-				Love to travel and explore new places. Foodie at heart. Coffee lover. Always up for an adventure!
+				Love to travel and explore new places. Foodie at heart. Coffee lover.
+				Always up for an adventure!
 			</p>
 
 			<!-- media items -->
@@ -91,7 +88,9 @@
 			</div>
 
 			<!-- buttons -->
-			<button class="btn-edit-profile btn-profile" id="edit-profile-btn">Edit Profile</button>
+			<button class="btn-edit-profile btn-profile" id="edit-profile-btn">
+				Edit Profile
+			</button>
 			<button class="btn-create-post btn-profile" id="edit-post-btn">
 				Create Post
 			</button>
@@ -107,6 +106,63 @@
 			</div>
 			<div class="advertisement-item">
 				<img src="./public/image/advertisement/ads-instagramly.png" alt="advertisement" />
+			</div>
+		</div>
+
+		<!-- 编辑个人信息弹窗 -->
+		<div id="edit-profile-modal" class="modal">
+			<div class="modal-content profile-modal">
+				<span class="modal-content-title">Edit Profile</span>
+				<span class="close" id="edit-profile-close">
+					<img src="./public/image/icon/icon-close.png" alt="icon-close" />
+				</span>
+
+				<div class="profile-modal-avatar" id="drop-area">
+					<label for="file-input">
+						<img id="upload-avatar" src="" alt="upload avatar" />
+						<div id="icon-upload">
+							<img src="./public/image/icon/icon-upload.png" alt="icon upload" />
+						</div>
+						<input type="file" id="file-input" name="avatar" />
+					</label>
+				</div>
+				<div class="profile-modal-input">
+					<label for="name">Name</label>
+					<input type="text" id="name" name="name" value="" />
+				</div>
+				<div class="profile-modal-input">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" value="" />
+				</div>
+				<div class="profile-modal-input">
+					<label for="constellation">Constellation</label>
+					<input type="text" id="constellation" name="constellation" value="" />
+				</div>
+				<div class="profile-modal-input">
+					<label for="MBTI">MBTI</label>
+					<input type="text" id="MBTI" name="MBTI" value="" />
+				</div>
+				<div class="profile-modal-input">
+					<label for="hobby">Hobby</label>
+					<input type="text" id="hobby" name="hobby" value="" />
+				</div>
+				<div class="profile-modal-input">
+					<label for="name">Linked</label>
+					<input type="linked" id="linked" name="linked" value="" />
+				</div>
+				<div class="profile-modal-input">
+					<label for="X">X</label>
+					<input type="text" id="x" name="x" value="" />
+				</div>
+				<div class="profile-modal-input">
+					<label for="weChat">WeChat</label>
+					<input type="text" id="weChat" name="weChat" value="" />
+				</div>
+				<div class="profile-modal-input profile-modal-input-introduction">
+					<label for="profile-introduction">Profile Introduction</label>
+					<textarea type="text" id="profile-introduction" name="profile-introduction"></textarea>
+				</div>
+
 			</div>
 		</div>
 	</div>
