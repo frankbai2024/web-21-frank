@@ -1,8 +1,12 @@
+import { updateProfiles } from "../database/database.js";
+
 export const bindEditProfile = async () => {
     // 获取 HTML 元素
     const modal = document.getElementById("edit-profile-modal");
     const btn = document.getElementById("edit-profile-btn");
     const close = document.getElementById("edit-profile-close");
+    const cancel = document.getElementById("edit-profile-cancel");
+    const save = document.getElementById("edit-profile-save");
 
     btn.addEventListener("click", () => {
         // 获取侧边栏中的信息
@@ -10,10 +14,10 @@ export const bindEditProfile = async () => {
         const profileName = document.getElementById("profile-name").textContent;
         const profileEmail = document.getElementById("profile-email").textContent;
         const profileDescription = document.getElementById(
-            "profile-description",
+            "profile-description"
         ).textContent;
         const constellation = document.getElementById(
-            "profile-constellation",
+            "profile-constellation"
         ).textContent;
         const mbti = document.getElementById("profile-mbti").textContent;
         const hobby = document.getElementById("profile-hobby").textContent;
@@ -32,6 +36,7 @@ export const bindEditProfile = async () => {
         document.getElementById("x").value = x;
         document.getElementById("weChat").value = weChat;
         document.getElementById("profile-introduction").value = profileDescription;
+
         // 显示弹窗
         modal.style.display = "flex";
     });
@@ -40,4 +45,46 @@ export const bindEditProfile = async () => {
         // 点击关闭按钮时隐藏弹窗
         modal.style.display = "none";
     });
-}
+
+    cancel.addEventListener("click", () => {
+        // 点击取消按钮时隐藏弹窗
+        modal.style.display = "none";
+    });
+
+    save.addEventListener("click", async () => {
+        // 获取表单中的信息
+        const avatarInput = document.getElementById("file-input");
+        const profileName = document.getElementById("name").value;
+        const profileEmail = document.getElementById("email").value;
+        const profileDescription = document.getElementById(
+            "profile-introduction"
+        ).value;
+        const constellation = document.getElementById("constellation").value;
+        const mbti = document.getElementById("MBTI").value;
+        const hobby = document.getElementById("hobby").value;
+        const linked = document.getElementById("linked").value;
+        const x = document.getElementById("x").value;
+        const weChat = document.getElementById("weChat").value;
+
+        let updatedProfile = {
+            name: profileName,
+            email: profileEmail,
+            description: profileDescription,
+            hobby: hobby,
+            constellation: constellation,
+            mbti: mbti,
+            linked: linked,
+            x: x,
+            wechat: weChat,
+        };
+
+        await updateProfiles(updatedProfile);
+
+        // 点击保存按钮时隐藏弹窗
+        modal.style.display = "none";
+
+        setTimeout(() => {
+            location.reload();
+        }, 500); // 延迟 0.5 秒
+    });
+};
