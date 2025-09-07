@@ -4,6 +4,10 @@ const router = require('./routes/index');
 const { handleErrors } = require('./middleware/errorMiddleware');
 const app = express();
 
+//增加json 和url编码请求体大小限制
+app.use(express.json({ limit: "5mb" }));
+app.use(express.urlencoded({ limit: "5mb", extended: true }));
+
 app.use(cors());
 app.use(express.json());
 

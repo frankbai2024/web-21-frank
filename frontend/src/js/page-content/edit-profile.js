@@ -1,4 +1,5 @@
 import { updateProfiles } from "../database/database.js";
+import { convertToBase64 } from "../utils/base64-image.js";
 
 export const bindEditProfile = async () => {
     // 获取 HTML 元素
@@ -77,6 +78,15 @@ export const bindEditProfile = async () => {
             x: x,
             wechat: weChat,
         };
+
+
+        // 上传头像 
+        const file = avatarInput.files[0];
+        if (file) {
+            const avatarBase64String = await convertToBase64(file);
+            // updatedProfile.avatar = avatarBase64String;
+            updatedProfile = { ...updatedProfile, avatar: avatarBase64String };
+        }
 
         await updateProfiles(updatedProfile);
 
