@@ -35,8 +35,9 @@ export const refreshPostData = async () => {
             postsContainer.innerHTML += postHTML;
         });
     }
-
-
-
+}
+export const bindContentCardButtons = async () => { 
+  // 绑定编辑按钮
+  // 绑定删除按钮
 
 }
