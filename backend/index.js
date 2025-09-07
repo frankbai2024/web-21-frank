@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const router = require('./routes/index');
-const { handleErrors } = require('./middleware/errorMiddleware');
+const express = require("express");
+const cors = require("cors");
+const router = require("./routes/index");
+const { handleErrors } = require("./middleware/errorMiddleware");
 
 const app = express();
 
@@ -12,12 +12,11 @@ app.use(express.urlencoded({ limit: "5mb", extended: true }));
 app.use(cors());
 app.use(express.json());
 
-app.use('/api',router)
+app.use("/api", router);
 //use error middleware at the end
-app.use(handleErrors)
+app.use(handleErrors);
 
-const PORT = 80;
+const PORT = 8001;
 app.listen(PORT, () => {
   console.log(`server is running on port http://localhost:${PORT}`);
 });
-
