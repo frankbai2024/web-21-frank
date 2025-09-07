@@ -79,7 +79,6 @@ export const bindEditProfile = async () => {
             wechat: weChat,
         };
 
-
         // 上传头像 
         const file = avatarInput.files[0];
         if (file) {
