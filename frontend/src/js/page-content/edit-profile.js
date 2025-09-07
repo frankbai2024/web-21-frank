@@ -97,3 +97,18 @@ export const bindEditProfile = async () => {
         }, 500); // 延迟 0.5 秒
     });
 };
+
+export const bindUploadAvatar = () => {
+  const dropArea = document.getElementById("drop-area");
+  const uploadAvatar = document.getElementById("upload-avatar");
+
+  dropArea.addEventListener("change", (event) => {
+    const files = event.target.files;
+    if (files.length > 0) {
+      console.log(`已选择文件: ${files[0].name}`);
+      const objectURL = URL.createObjectURL(files[0]);
+      uploadAvatar.src = objectURL;
+      uploadAvatar.onload = () => URL.revokeObjectURL(objectURL); // 加载后释放 URL
+    }
+  });
+};
